@@ -47,6 +47,8 @@ class RedBlueColorableDFS {
 export const isRedBlueColorable = (graph: Graph<string>): boolean => {
 
   const connectedDFS = new RedBlueColorableDFS(graph)
+
+  // starting the depth first search from 0 vertex and setting the next color to be blue (-1)
   const isRedBlueColorable = connectedDFS.dfs(0, -1)
 
   const isConnected = graph.V() === connectedDFS.getVisitedCount()

@@ -31,10 +31,12 @@ class ConnectedDFS {
 
 export const isConnected = (graph: Graph<string>): boolean => {
 
+  // for a graph to be conncted it should have atleast two nodes
   if(graph.V() < 2) return false
 
   const connectedDFS = new ConnectedDFS(graph)
 
+  // starting the visit the graph from 0th vertex
   connectedDFS.dfs(0)
 
   return connectedDFS.getVisitedCount() === graph.V()
