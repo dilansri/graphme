@@ -7,11 +7,10 @@ import './index.css'
 
 export const App : React.FunctionComponent= () => {
 
+  // elevated state for the controlled input
   const [graphInputText, setGraphInputText] = useState('')
 
-  const {graph, isInvalidGraph} = useMemo(() => Utils.buildGraph(graphInputText), [graphInputText])
-
-  
+  const { graph, isInvalidGraph } = useMemo(() => Utils.buildGraph(graphInputText), [graphInputText])
 
   const handleGraphInputTextChange: ChangeEventHandler<HTMLTextAreaElement> = (event) => {
     setGraphInputText(event.target.value)
