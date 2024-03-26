@@ -15,6 +15,7 @@ steps:
     azureSubscription: 'Azure Devops'
     appName: 'dilansrilal-dilansrilal-98d03d78-91e0-4674-8b5b-a071ad599b05'
     resourceGroupName: 'sub-1-rg'
+    appType: webApp
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
